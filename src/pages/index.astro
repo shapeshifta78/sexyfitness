@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
-import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -92,17 +92,22 @@ const posts = (await getCollection('blog')).sort(
 			<section>
 				<ul>
 					{
-						posts.map((post) => (
-							<li>
-								<a href={`/${post.id}/`}>
-									<Picture width={720} height={360} formats={['avif', 'webp']} src={post.data.heroImage || 'blog-placeholder-2.jpg'} alt={post.data.title} />
-									<h4 class="title">{post.data.title}</h4>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
+						posts.map((post) => {
+
+							return (
+								<li>
+									<a href={`/${post.id}/`}>
+										<Image width={720} height={360}
+												 src={post.data.heroImage || 'blog-placeholder-2.jpg'}
+												 alt={post.data.title}/>
+										<h4 class="title">{post.data.title}</h4>
+										<p class="date">
+											<FormattedDate date={post.data.pubDate}/>
+										</p>
+									</a>
+								</li>
+							);
+						})
 					}
 				</ul>
 			</section>
