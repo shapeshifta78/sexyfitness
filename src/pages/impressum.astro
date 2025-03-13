@@ -3,41 +3,79 @@ import Layout from '../layouts/BlogPost.astro';
 ---
 
 <Layout
-	title="Impressum"
+	title="Impressum und Datenschutz"
 	description=""
 	pubDate={new Date('Feb 08 2025')}
 	heroImage=""
 >
+
+	<h2>Impressum</h2>
 	<p>Angaben gemäß § 5 TMG:</p>
 	<p><strong>Name des Betreibers:</strong><br>
-		Thomas Horster
+		Thomas Horster<br>
+
 	<p><strong>Adresse:</strong><br>
 		Alfred-Kästner-Straße 22<br>
 		04275 Leipzig<br>
 		Deutschland</p>
 
 	<p><strong>Kontakt:</strong><br>
-		E-Mail: <span id="email"></span>
+		E-Mail: <a href="#" id="email-link">[email&#160;protected]</a><br>
 		<script>
-			const user = 'thomas.horster';
-			const domain = 'kulturlounge.de';
-			const email =document.getElementById('email');
+		  const emailUser: string = 'thomas.horster';
+		  const emailDomain: string = 'kulturlounge.de';
+		  const emailLink: HTMLAnchorElement | null = document.getElementById('email-link') as HTMLAnchorElement;
 
-			if (email) {
-				email.innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
-			}
-		</script>
+		  if (emailLink) {
+		    emailLink.href = `mailto:${emailUser}@${emailDomain}`;
+		    emailLink.innerHTML = `${emailUser}@${emailDomain}`;
+		  }
+		</script><br>
+		Website: <a href="https://sexyfitness.de" target="_blank">sexyfitness.de</a></p>
 
 	<p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
-		[Dein Vorname und Nachname]</p>
+		Thomas Horster</p>
 
-	<h2>Haftungsausschluss</h2>
-	<p>Die Inhalte dieses Blogs wurden mit größter Sorgfalt erstellt. Dennoch übernimmt der Betreiber keine Gewähr für die Vollständigkeit, Richtigkeit und Aktualität der bereitgestellten Informationen. Für externe Links, auf die innerhalb dieses Blogs verwiesen wird, übernimmt der Betreiber keine Verantwortung. Die verlinkten Seiten unterliegen der Haftung der jeweiligen Betreiber.</p>
+	<h2>Datenschutzerklärung</h2>
 
-	<h2>Urheberrecht</h2>
-	<p>Die auf diesem Blog veröffentlichten Inhalte, Bilder und Texte unterliegen dem Urheberrecht. Eine Vervielfältigung, Verbreitung oder sonstige Nutzung der Inhalte ist nur mit ausdrücklicher Zustimmung des Betreibers oder des jeweiligen Urheberrechtsinhabers gestattet.</p>
+	<p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
 
-	<h2>Datenschutz</h2>
-	<p>Details zum Datenschutz findest du in der <a href="[Link zur Datenschutzerklärung]" target="_blank">Datenschutzerklärung</a> auf dieser Website.</p>
+	<h3>1. Verantwortliche Stelle</h3>
+	<p>Verantwortlich im Sinne der Datenschutzgesetze ist:</p>
+	<p><strong>Thomas Horster</strong><br>
+	Kontakt siehe Impressum weiter oben.
+	</p>
+
+	<h3>2. Erhebung und Verarbeitung personenbezogener Daten</h3>
+	<p>Wir erheben und verarbeiten personenbezogene Daten nur, wenn dies gesetzlich erlaubt ist oder Sie in die Erhebung der Daten einwilligen. Zu den personenbezogenen Daten gehören unter anderem Informationen wie Ihr Name, Ihre E-Mail-Adresse und Ihre IP-Adresse.</p>
+
+	<h3>3. Nutzung von Google Analytics</h3>
+	<p>Diese Website verwendet Google Analytics, einen Webanalysedienst von Google Inc. ("Google"). Google Analytics verwendet Cookies, die auf Ihrem Computer gespeichert werden und die eine Analyse der Nutzung der Website durch Sie ermöglichen. Die durch das Cookie erzeugten Informationen über Ihre Nutzung dieser Website (einschließlich Ihrer IP-Adresse) werden an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Website-Aktivitäten für die Website-Betreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen.</p>
+
+	<p>Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; wir weisen jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich nutzen können. Weitere Informationen zum Datenschutz in Bezug auf Google Analytics finden Sie in der <a href="https://policies.google.com/privacy" target="_blank">Google-Datenschutzerklärung</a>.</p>
+
+	<h3>4. Nutzung von Google AdSense</h3>
+	<p>Diese Website verwendet Google AdSense, einen Dienst zur Einblendung von Werbeanzeigen, der von Google Inc. bereitgestellt wird. Google AdSense verwendet Cookies, um personalisierte Anzeigen basierend auf den Interessen der Besucher anzuzeigen. Diese Informationen werden an Google übertragen und von Google verarbeitet.</p>
+
+	<p>Die gespeicherten Informationen können von Google verwendet werden, um Anzeigen auf Basis Ihrer Interessen zu personalisieren. Sie können die personalisierte Werbung in Ihren Google-Werbeeinstellungen deaktivieren. Weitere Informationen zur Datennutzung durch Google AdSense und zu den Datenschutzbestimmungen von Google finden Sie in der <a href="https://policies.google.com/privacy" target="_blank">Google-Datenschutzerklärung</a>.</p>
+
+	<h3>5. Cookies</h3>
+	<p>Unsere Website verwendet Cookies, um die Benutzererfahrung zu verbessern und die Nutzung unserer Webseite zu analysieren. Cookies sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden und die es uns ermöglichen, Ihr Gerät bei späteren Besuchen wiederzuerkennen. Diese Cookies können von Google Analytics und Google AdSense gesetzt werden. Sie können die Verwendung von Cookies in den Einstellungen Ihres Browsers deaktivieren, allerdings könnte dies die Funktionalität der Webseite beeinträchtigen.</p>
+
+	<h3>6. Weitergabe von Daten</h3>
+	<p>Wir geben Ihre personenbezogenen Daten nur dann an Dritte weiter, wenn dies gesetzlich erlaubt ist oder Sie zuvor eingewilligt haben. Eine Weitergabe Ihrer Daten an Dritte zu kommerziellen Zwecken erfolgt nicht ohne Ihre ausdrückliche Zustimmung.</p>
+
+	<h3>7. Rechte der betroffenen Person</h3>
+	<p>Sie haben das Recht, jederzeit Auskunft über Ihre gespeicherten personenbezogenen Daten zu erhalten, diese zu berichtigen oder deren Löschung zu verlangen, soweit keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Zudem haben Sie das Recht, der Verarbeitung Ihrer Daten zu widersprechen oder die Einwilligung zur Verarbeitung zu widerrufen.</p>
+
+	<h3>8. Sicherheit Ihrer Daten</h3>
+	<p>Wir setzen technische und organisatorische Sicherheitsmaßnahmen ein, um Ihre personenbezogenen Daten vor Verlust, Zerstörung, Zugriff und unbefugter Offenlegung zu schützen. Diese Sicherheitsmaßnahmen werden regelmäßig überprüft und angepasst.</p>
+
+	<h3>9. Änderungen der Datenschutzerklärung</h3>
+	<p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf zu ändern. Die jeweils aktuelle Version ist auf dieser Seite veröffentlicht.</p>
+
+	<h3>10. Kontakt</h3>
+	<p>Wenn Sie Fragen zum Thema Datenschutz haben, können Sie uns jederzeit unter den oben angegebenen Kontaktdaten erreichen.</p>
+
 
 </Layout>
