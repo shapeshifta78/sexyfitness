@@ -20,10 +20,10 @@ import Layout from '../layouts/BlogPost.astro';
 		E-Mail: <span id="email"></span>
 		<script>
 			const user = 'thomas.horster';
-
 			const domain = 'kulturlounge.de';
-			const email =document.getElementById('email')
-			if(email) {
+			const email =document.getElementById('email');
+
+			if (email) {
 				email.innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
 			}
 		</script>
