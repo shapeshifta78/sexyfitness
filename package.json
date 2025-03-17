@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "sexyfitness",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -12,7 +12,8 @@
     "@astrojs/mdx": "^4.1.1",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.4.3"
+    "astro": "^5.4.3",
+    "astro-embed": "^0.9.0"
   },
   "devDependencies": {
     "prettier": "3.5.3"
